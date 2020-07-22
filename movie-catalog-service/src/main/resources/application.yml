@@ -1,0 +1,18 @@
+spring.application.name: movie-catalog-service
+
+server.port: 8081
+
+# All db properties are overrided from spring config server on the basis of artifact id
+db:
+  connection : "{connectionString : 'http___Movie_service', userName:'foo', pass : 'ipass'}"
+  host : 127.0.0.1
+  port : 8600
+
+management.endpoints.web.exposure.include: "*"
+
+spring:
+  cloud:
+    config:
+      uri:
+        http://localhost:8888
+ 
